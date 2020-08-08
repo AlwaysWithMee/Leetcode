@@ -1,4 +1,5 @@
 package Array;
+
 // 1480. Running Sum of 1d Array
 public class Leetcode1480 {
 

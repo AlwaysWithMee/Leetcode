@@ -14,9 +14,9 @@ public class Leetcode119 {
         pascalArray.add(row1);
         pascalArray.add(row2);
 
-        for(int i = 2; i < rowIndex+1; ++i){
+        for (int i = 2; i < rowIndex + 1; ++i) {
 
-            ArrayList<Integer> prevRow = pascalArray.get(i-1);
+            ArrayList<Integer> prevRow = pascalArray.get(i - 1);
             ArrayList<Integer> currRow = pascal(prevRow);
 
             pascalArray.add(currRow);
@@ -25,17 +25,18 @@ public class Leetcode119 {
         return pascalArray.get(rowIndex);
     }
 
-    public static ArrayList<Integer> pascal (List<Integer> prevRow){
+    public static ArrayList<Integer> pascal(List<Integer> prevRow) {
 
-        ArrayList <Integer> nextRow = new ArrayList<Integer>();
+        ArrayList<Integer> nextRow = new ArrayList<Integer>();
         nextRow.add(1);
 
-        for(int i = 0; i < prevRow.size() - 1; ++i){
+        for (int i = 0; i < prevRow.size() - 1; ++i) {
 
-            int j = i+1;
+            int j = i + 1;
             nextRow.add(prevRow.get(i) + prevRow.get(j));
 
         }
         nextRow.add(1);
         return nextRow;
     }
+}

@@ -6,7 +6,7 @@ public class Leetcode143 {
     public void reorderList(ListNode head) {
 
         ArrayList<ListNode> array = new ArrayList<ListNode>();
-        2ListNode iterator = head;
+        ListNode iterator = head;
 
         while(iterator != null){
             array.add(iterator);

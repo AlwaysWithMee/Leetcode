@@ -7,19 +7,19 @@ public class Leetcode69 {
 
         long left = 1, right = x;
 
-        while(left < right){
+        while (left < right) {
 
             long mid = left + (right - left) / 2;
 
-            if(mid * mid < x)
+            if (mid * mid < x)
                 left = mid + 1;
             else
                 right = mid;
         }
         if (left * left <= x)
-            return (int)left;
+            return (int) left;
         else
-            return (int)left-1;
+            return (int) left - 1;
 
     }
 }

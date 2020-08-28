@@ -21,5 +21,5 @@ public class Leetcode143 {
             head = head.next;
             head.next = null;
         }
-    }63
+    }
 }

@@ -60,4 +60,27 @@ public class Leetcode116 {
         }
         return root;
     }
+
+    // Depth-First Search
+    public Node connect1(Node root) {
+
+        if (root == null) return null;
+        connectHelper(root.left, root.right);
+
+        return root;
+
+    }
+
+    public void connectHelper(Node node1, Node node2){
+
+        if(node1 == null || node2 == null)
+            return;
+
+        node1.next = node2;
+
+        connectHelper(node1.left, node1.right);
+        connectHelper(node2.left, node2.right);
+        connectHelper(node1.right, node2.left);
+
+    }
 }

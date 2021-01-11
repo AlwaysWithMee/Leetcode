@@ -27,14 +27,17 @@ public class Leetcode589 {
     // Recursive solution
     public List<Integer> preorder(Node root) {
 
-        if (root == null)
-            return res;
+        // Base case
+        if (root == null) return res;
 
+        // Add node value to the array
         res.add(root.val);
 
-        for(Node node : root.children)
+        // Preorder call children node
+        for (Node node : root.children)
             preorder(node);
 
+        // Return result
         return res;
 
     }
@@ -42,26 +45,34 @@ public class Leetcode589 {
     // Iterative solution
     public List<Integer> preorder1(Node root) {
 
-        List <Integer> res = new ArrayList<>();
+        // Base case
         if (root == null)
             return res;
 
-        Stack<Node> stack = new Stack<>();
-        stack.push(root);
+        // Initialize Stack
+        Stack <Node> stack = new Stack<>();
 
+        // Add root node to the stack
+        stack.add(root);
+
+        // While the stack is not empty
         while (!stack.isEmpty()){
 
+            // Get the current node
             Node curr = stack.pop();
+
+            // Add current node to the array
             res.add(curr.val);
 
-            for(int i = curr.children.size() - 1; i >= 0; i--){
-
+            // Preorder traversal
+            // Push node to the stack from last to first
+            for(int i = curr.children.size() - 1; i >= 0; i--)
                 stack.push(curr.children.get(i));
 
-            }
         }
 
         return res;
+
     }
 
 }

@@ -19,6 +19,7 @@ public class Leetcode226 {
         }
     }
 
+    // BFS Solution
     public TreeNode invertTree(TreeNode root) {
 
         if (root == null) return null;
@@ -47,5 +48,21 @@ public class Leetcode226 {
         }
 
         return root;
+    }
+
+    // DFS - Preorder Solution
+    public TreeNode invertTree1(TreeNode root) {
+
+        if (root == null) return root;
+
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
+        invertTree(root.left);
+        invertTree(root.right);
+
+        return root;
+
     }
 }

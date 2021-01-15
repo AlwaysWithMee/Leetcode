@@ -6,19 +6,6 @@ import java.util.LinkedList;
 // 111. Minimum Depth of Binary Tree
 public class Leetcode111 {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     // BFS Solution
     public int minDepth(TreeNode root) {
 

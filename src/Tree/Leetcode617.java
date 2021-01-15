@@ -3,25 +3,6 @@ package Tree;
 // 617. Merge Two Binary Trees
 public class Leetcode617 {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
 
         if (t1 == null && t2 == null) return null;

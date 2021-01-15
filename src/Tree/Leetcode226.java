@@ -6,19 +6,6 @@ import java.util.Queue;
 // 226. Invert Binary Tree
 public class Leetcode226 {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     // BFS Solution
     public TreeNode invertTree(TreeNode root) {
 

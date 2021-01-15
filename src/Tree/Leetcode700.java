@@ -2,25 +2,6 @@ package Tree;
 
 public class Leetcode700 {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     // Binary Search Solution
     public TreeNode searchBST(TreeNode root, int val) {
 

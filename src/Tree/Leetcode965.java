@@ -3,19 +3,6 @@ package Tree;
 // 965. Univalued Binary Tree
 public class Leetcode965 {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     int val = -1;
     public boolean isUnivalTree(TreeNode root) {
 
